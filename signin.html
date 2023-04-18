@@ -19,17 +19,21 @@
         <div class="container">
             <div class="navbar">
                 <div class="logo">
-                    <img src="img/Header/Logo.png" width="125px">
+                    <a href="index.html">
+                        <img src="img/Header/Logo.png" width="125px">
+                    </a>
                 </div>
                 <nav id="menu">
                     <ul>
-                        <li><a href="index.html">Inicio</a></li>
-                        <li><a href="products.html">Productos</a></li>
-                        <li><a href="location.html">Ubicación</a></li>
-                        <li><a href="login.html">Cuenta</a></li>
+                        <li class="labelIndex"><a href="index.html">Inicio</a></li>
+                        <li class="labelProducts"><a href="products.html">Productos</a></li>
+                        <li class="labelLocation"><a href="location.html">Ubicación</a></li>
+                        <li class="labelLogin"><a href="login.html">Cuenta</a></li>
                     </ul>
                 </nav>
-                <img src="img/Header/Bolsa.png" alt="">
+                <a href="index.html">
+                    <img class="bag" src="img/Header/Bolsa.png" alt="">
+                </a>
             </div>
         </div>
     </div>
@@ -39,8 +43,9 @@
             <div class="row">
                 <div class="col-1">
                     <div class="form-box">
-                        <h2 class="title">Registrate</h2>
-
+                        <div class="title">
+                            <h2 class="title">Registrate</h2>
+                        </div>                    
                         <form>
                             <input type="text" placeholder="Nombres">
                             <input type="text" placeholder="Apellido paterno">
@@ -48,14 +53,11 @@
                             <input type="text" placeholder="Edad">
                             <input type="text" placeholder="Dirección">
                             <input type="text" placeholder="Genéro">
-                            <input type="text" placeholder="Email">
-                            <input type="text" placeholder="Contraseña">
+                            <input type="email" placeholder="Email">
+                            <input type="password" placeholder="Contraseña">
                             <button type="submit" class="btn">Registrate</button>
                         </form>
                     </div>
-                </div>
-                <div class="col-1">
-                    <img src="img/Login/background.png">
                 </div>
             </div>
         </div>

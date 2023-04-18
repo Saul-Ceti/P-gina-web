@@ -1,3 +1,6 @@
+/*Archivo CSS - Saúl Iván Hernández Enríquez - 21310395*/
+/*//////////////////////////////////////////////////////////////////////////////////////////////*/
+/*Todo el documento*/
 * {
     margin: 0;
     padding: 0;
@@ -7,7 +10,8 @@
 body {
     font-family: 'Lato', sans-serif;
 }
-
+/*//////////////////////////////////////////////////////////////////////////////////////////////*/
+/* Barra de navegación */
 .navbar {
     display: flex;
     align-items: center;
@@ -34,6 +38,8 @@ a {
     color: #6a2c70;
 }
 
+/*//////////////////////////////////////////////////////////////////////////////////////////////*/
+/* Contenedor general */
 .container {
     max-width: 85rem;
     margin: auto;
@@ -65,6 +71,8 @@ a {
     font-style: italic;
 }
 
+/*//////////////////////////////////////////////////////////////////////////////////////////////*/
+/* Boton ver mas */
 .btn {
     display: inline-block;
     background: #6a2c70;
@@ -103,6 +111,8 @@ a {
     padding-right: 1.5rem;
 }
 
+/*//////////////////////////////////////////////////////////////////////////////////////////////*/
+/* Productos */
 .featured {
     flex-basis: 30%;
     padding: .5rem;
@@ -111,9 +121,14 @@ a {
 }
 
 .featured img {
-    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: 450px;
 }
 
+/*//////////////////////////////////////////////////////////////////////////////////////////////*/
+/* Titulo */
 .title h1 {
     text-align: center;
     font-size: 700;
@@ -123,6 +138,18 @@ a {
     color: #6a2c70;
 }
 
+.title h2 {
+    text-align: center;
+    font-size: 700;
+    margin: 0 auto;
+    position: relative;
+    line-height: 4rem;
+    color: #6a2c70;
+    margin-bottom: 1rem;
+}
+
+/*//////////////////////////////////////////////////////////////////////////////////////////////*/
+/*Footer*/
 .footer {
     background: black;
     color: #fff;
@@ -143,6 +170,8 @@ a {
     text-align: right;
 }
 
+/*//////////////////////////////////////////////////////////////////////////////////////////////*/
+/* Login */
 .login {
     padding: 3px 0;
     background: radial-gradient(#fff, #e99cb1);
@@ -151,13 +180,27 @@ a {
 .form-box {
     background: #fff;
     width: 30rem;
-    height: 45rem;
+    height: 50rem;
     position: relative;
     text-align: center;
-    padding: 1.5rem 0;
+    padding: 1.5rem;
     margin: 1.5rem;
+    border-radius: 1rem;
+    box-shadow:black;
+    box-shadow: .15rem .15rem rgba(0, 0, 0, 0.5);
 }
-
+  
+input[type="email"],
+input[type="password"],
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: .15rem solid #ac8cac;
+    border-radius: .5rem;
+    margin-bottom: .5rem;
+}
+  
+    
 form input {
     align-items: center;
     justify-content: center;
@@ -166,4 +209,152 @@ form input {
     margin: .5rem 0;
     padding: 0 1rem;
     border: .2rem solid #ccc;
+}
+
+/*//////////////////////////////////////////////////////////////////////////////////////////////*/
+/* Carrito */
+.bag:hover {
+    position: relative;
+    margin-bottom: 10px;
+    transition: .5s ease-in-out;
+}
+
+.bag:not(:hover) {
+    position: relative;
+    margin-bottom: 0px;
+    transition: .5s ease-in-out;
+}
+
+select {
+    border: .1rem solid #ac8cac;
+    padding: .1rem;
+    margin: .1rem;
+    border-radius: .2rem;
+}
+
+.map {
+    border-radius: 1rem;
+    margin-bottom: 3rem;
+}
+
+/*//////////////////////////////////////////////////////////////////////////////////////////////*/
+/*Página de administrador*/
+.sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 15rem;
+    background: #fff0f4;
+}
+
+.sidebar .logo-details {
+    height: 2rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar .logo-details img{    
+    min-width: 32px;
+    padding: 1rem;
+    text-align: center;
+}
+
+.sidebar .logo-details .logo-name{
+    font-size: 1.2rem;
+    color: #6a2c70;
+    font-weight: 600;
+}
+
+.sidebar .nav-links {
+    height: 100%;
+    padding-top: 2rem;
+}
+
+.sidebar .nav-links li{
+    position: relative;
+    list-style: none;
+    transition: all 0.4s ease;
+}
+
+.sidebar .nav-links li:hover{
+    background: #ecbdde;
+}
+
+.sidebar .nav-links li .icon-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sidebar .nav-links li i{
+    height: 2rem;
+    min-width: 78px;
+    text-align: center;
+    line-height: 2rem;
+    color: #6a2c70;
+    font-size: 1.3rem;
+}
+
+.sidebar .nav-links li a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.sidebar .nav-links li a .link-name{
+    font-size: 1rem;
+    font-weight: 400;
+    color: #6a2c70;
+}
+
+.sidebar .nav-links li .sub-menu{
+    padding: .4rem .4rem .9rem 5rem;
+    margin-top: -.2rem;
+    background: #ecbdde;
+    /*display: none;*/
+}
+
+.sidebar .nav-links li .sub-menu a{
+    color: #6a2c70;
+    font-size: 1rem;
+    padding: .3rem 0 ;
+    white-space: nowrap;
+    opacity: 0.6;
+    transition: all 0.3 ease;
+}
+
+.sidebar .nav-links li .sub-menu a:hover{
+    opacity: 1;
+}
+
+.sidebar.close .nav-links li .sub-menu{
+    position: absolute;
+    left: 100%;
+    top: -.8rem;
+    margin-top: 0;
+    padding: .6rem 1.2rem;
+    border-radius: 0 .2rem .2rem 0;
+    transition: all 0.4s ease;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.sidebar.close .nav-links li:hover .sub-menu{
+    top: 0;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.sidebar .nav-links li .sub-menu .link-name{
+    font-size: 1.1rem;
+    opacity: 1;
+    display: none;
+}
+
+.sidebar.close .nav-links li .sub-menu .link-name{
+    font-size: 1.1rem;
+    opacity: 1;
+    display: block  ;
 }
