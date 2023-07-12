@@ -9,6 +9,7 @@
 
 body {
     font-family: 'Lato', sans-serif;
+    height: 100%;
 }
 /*//////////////////////////////////////////////////////////////////////////////////////////////*/
 /* Barra de navegación */
@@ -54,14 +55,47 @@ a {
     justify-content: space-around;
 }
 
+.rectification {
+    display: flex;
+    align-content: flex-end;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
 .col-1 {
     flex-basis: 50%;
     min-width: 25rem;
+    justify-content: center;
+}
+
+.col-2 {
+    flex-basis: 0%;
+    min-width: 25rem;
+}
+
+.col-2 {
+    width: 25rem;
+}
+
+.col-3 {
+    position: relative;
+    flex-basis: 100%;
+}
+
+.tabla-editar {
+    border-collapse: separate;
+    border-spacing: 10px;
+    border: 1px solid #6a2c70;
 }
 
 .col-1 img {
-    max-width: 100%;
-    padding: 4rem 0;
+    max-width: 70%;
+    text-align: center;
+    margin-left: 5rem;
+    margin-right: auto;
+    position: relative;
 }
 
 .col-1 h1 {
@@ -75,12 +109,28 @@ a {
 /* Boton ver mas */
 .btn {
     display: inline-block;
+    justify-content: center;
+    align-items: center;
     background: #6a2c70;
     color: #fff;
     padding: .5rem 3rem;
-    margin: 3rem 0;
     border-radius: 1rem;
     transition: background 0.5s;
+    text-align: center;
+    margin: 2rem 5rem;
+}
+
+.featured button {
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    background: #6a2c70;
+    color: #fff;
+    padding: .5rem 3rem;
+    border-radius: 1rem;
+    transition: background 0.5s;
+    text-align: center;
+    margin: 2rem 0rem;
 }
 
 .btn:hover {
@@ -116,15 +166,26 @@ a {
 .featured {
     flex-basis: 30%;
     padding: .5rem;
-    min-width: 10rem;
+    min-width: 3rem;
     margin-bottom: 3rem;
 }
 
 .featured img {
-    max-width: 100%;
-    max-height: 100%;
-    width: auto;
+    width: 100%;
     height: 450px;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+.form-box-product {
+    background: #fff;
+    width: 30rem;
+    height: 50rem;
+    position: relative;
+    text-align: center;
+    padding: 1.5rem;
+    margin: 1.5rem;
+    border-radius: 1rem;
 }
 
 /*//////////////////////////////////////////////////////////////////////////////////////////////*/
@@ -192,7 +253,8 @@ a {
   
 input[type="email"],
 input[type="password"],
-input[type="text"] {
+input[type="text"],
+input[type="number"] {
     width: 100%;
     padding: 10px;
     border: .15rem solid #ac8cac;
@@ -313,7 +375,6 @@ select {
     padding: .4rem .4rem .9rem 5rem;
     margin-top: -.2rem;
     background: #ecbdde;
-    /*display: none;*/
 }
 
 .sidebar .nav-links li .sub-menu a{
@@ -357,4 +418,51 @@ select {
     font-size: 1.1rem;
     opacity: 1;
     display: block  ;
+}
+
+.sidebar .profile-details {
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #ac8cac;
+    padding: .3rem 0;
+}
+
+.sidebar .profile-details .profile-content{
+    display: flex;
+    align-items: center;
+    opacity: .6;
+    transition: all .4s ease;
+    pointer-events: none;
+}
+
+.sidebar .profile-details:hover .profile-content {
+    display: flex;
+    align-items: center;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.sidebar .profile-details img{
+    height: 3rem;
+    width: 3rem;
+    object-fit: cover;
+    border-radius: 1rem;
+    margin: 0 .9rem 0 .8rem;
+    background-color: #6a2c70;
+    padding: .4rem;
+}
+
+.sidebar .profile-details .profile_name, 
+.sidebar .profile-details .job {
+    color: #6a2c70;
+    font-size: .735rem;
+    font-weight: 600;
+}
+
+.sidebar .profile-details .job {
+    font-size: .6rem;
+    font-weight: 400;
 }

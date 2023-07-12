@@ -26,12 +26,12 @@
                 <nav id="menu">
                     <ul>
                         <li><a href="index.html">Inicio</a></li>
-                        <li><a href="products.html">Productos</a></li>
+                        <li><a href="/services/Products/product-R.php">Productos</a></li>
                         <li><a href="location.html">Ubicación</a></li>
                         <li><a href="login.html">Cuenta</a></li>
                     </ul>
                 </nav>
-                <a href="index.html">
+                <a href="/services/Products/shopping-cart.php">
                     <img class="bag" src="img/Header/Bolsa.png" alt="">
                 </a>
             </div>
@@ -46,10 +46,10 @@
                         <div class="title">
                             <h2 class="title">Ingresa</h2>
                         </div>                        
-                        <form>
-                            <input type="email" placeholder="Email">
-                            <input type="password" placeholder="Contraseña">
-                            <a href="/administrator.html" class="btn">Ingresa</a>
+                        <form method="POST" action="services/Account/logIn.php">
+                            <input type="email" id="email" name="email" placeholder="Email" required>
+                            <input type="password" id="password" name="password" placeholder="Contraseña" required>
+                            <button type="submit" class="btn">Ingresa</button>
                             <div>
                                 <a href="/signin.html">No tienes una cuenta?</a>
                             </div>

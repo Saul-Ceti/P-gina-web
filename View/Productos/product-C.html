@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/styles.css">
-    <link rel="shortcut icon" href="img/Browser/Favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../../img/Browser/Favicon.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,700;1,900&display=swap" rel="stylesheet">
@@ -17,7 +18,7 @@
 <body>
     <div class="sidebar close">
         <div class="logo-details">
-            <img src="img/Header/Diamante.png">
+            <img src="../../img/Header/Diamante.png">
             <span class="logo-name">Imagen Perfecta</span>
         </div>
         <ul class="nav-links">
@@ -37,8 +38,8 @@
                 </div>
                 <ul class="sub-menu">
                     <li><a class="link-name" href="#">Usuarios</a></li>
-                    <li><a href="/services/Account/user-U.php">Clientes</a></li>
-                    <li><a href="/services/Account/admin-U.php">Administradores</a></li>
+                    <li><a href="../../services/Account/user-U.php">Clientes</a></li>
+                    <li><a href="../../services/Account/admin-U.php">Administradores</a></li>
                 </ul>
             </li>
             <li>
@@ -65,8 +66,8 @@
                 </div>
                 <ul class="sub-menu">
                     <li><a class="link-name" href="#">Productos</a></li>
-                    <li><a href="View/Productos/product-C.html">Agregar</a></li>
-                    <li><a href="/services/Products/product-U.php">Inventario</a></li>                    
+                    <li><a href="#">Agregar</a></li>
+                    <li><a href="../../services/Products/product-U.php">Inventario</a></li>                    
                 </ul>
             </li>
             <li>
@@ -102,18 +103,46 @@
             <li>
                 <div class="profile-details">
                     <div class="profile-content">
-                        <img src="img/profile.jpg" alt="profile">
+                        <img src="../../img/profile.jpg" alt="profile">
                     </div>
                     <div class="name-job">
                         <div class="profile_name">Eliud Hernández</div>
                         <div class="job">Director</div>
                     </div>
-                    <a href="login.html">
+                    <a href="../../login.html">
                         <i class='bx bx-log-out'></i>
+
                     </a>
                 </div>            
             </li>
         </ul>
     </div>
+    <div>
+        <div class="container">
+            <div class="row">
+                <div class="col-2">
+                    <div class="form-box-product">
+                        <div class="title">
+                            <h2 class="title">Agrega producto</h2>
+                        </div>                    
+                        <form method="POST" action="../../services/Products/product-C.php" enctype="multipart/form-data">
+                            <input type="text" id="name" name="name" placeholder="Nombre">
+                            <input type="number" id="price" name="price" placeholder="Precio">
+                            <input type="text" id="type" name="type" placeholder="Tipo">
+                            <input type="text" id="color" name="color" placeholder="Color">
+                            <input type="text" id="size" name="size" placeholder="Talla">
+                            <input type="number" id="stock" name="stock" placeholder="Cantidad">                            
+                            <label for="imagen">Seleccionar imagen:</label>
+                            <input type="file" id="imagen" name="imagen">
+                            <br>
+                            <input type="submit" value="Subir imagen">
+                            <button type="submit" class="btn">Agregar</button>
+                        </form>                          
+                    </div>
+                </div>
+            </div>
+        </div>        
+    </div>
 </body>
 </html>
+    
